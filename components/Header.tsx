@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Moon, Sun, Github, Linkedin } from "lucide-react";
-import { Cookie } from "next/font/google"; // Importing the font from next/font/google
+import { Cookie } from "next/font/google";
 import {
   Dialog,
   DialogContent,

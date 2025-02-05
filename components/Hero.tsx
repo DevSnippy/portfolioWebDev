@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import ContactModal from "./ContactModal";
 import { FlipWords } from "./ui/flip-words";
+import { Meteors } from "./ui/meteors"; // Make sure you have this import
 
 const Hero = () => {
   const ref = useRef(null);
@@ -14,9 +15,15 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900"
+      className="relative min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 overflow-hidden"
     >
-      <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
+      {/* Meteors effect in the background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Meteors number={20} />
+      </div>
+
+      {/* Hero content above meteors */}
+      <div className="relative z-10 container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -31,6 +38,7 @@ const Hero = () => {
           </p>
           <ContactModal />
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
