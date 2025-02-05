@@ -16,7 +16,11 @@ const Hero = () => {
   const { scrollY } = useScroll();
   const fadeOpacity = useTransform(scrollY, [0, 300], [1, 0]);
 
-  const words = ["Automation Engineer", "DevOps Engineer", "Kickass Engineer"];
+  const words = [
+    "Automation Developer",
+    "DevOps Developer",
+    "Full-stack Developer",
+  ];
 
   return (
     <motion.section
