@@ -10,16 +10,12 @@ import { Meteors } from "./ui/meteors";
 const Hero = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  // Get the scroll position and map it to an opacity value.
-  // As you scroll from 0 to 300px, opacity will go from 1 to 0.
   const { scrollY } = useScroll();
   const fadeOpacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   const words = [
     "Automation Developer",
     "DevOps Developer",
-    "Full-stack Developer",
   ];
 
   return (
