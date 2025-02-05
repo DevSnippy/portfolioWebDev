@@ -4,10 +4,12 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import ContactModal from "./ContactModal";
+import { FlipWords } from "./ui/flip-words";
 
 const Hero = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const words = ["Automation Engineer", "DevOps Engineer", "Kickass Engineer"];
 
   return (
     <section
@@ -25,7 +27,7 @@ const Hero = () => {
             Aviram Rabinovich
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-            Automation & DevOps engineer
+            <FlipWords words={words} />
           </p>
           <ContactModal />
         </motion.div>
