@@ -32,10 +32,11 @@ const AboutModal = () => {
             transition={{ duration: 0.3 }}
             className="text-gray-200"
           >
-            Hey there! I’m Aviram Rabinovich, an Automation & DevOps Engineer
-            with a passion for streamlining processes, optimizing workflows, and
-            delivering robust software solutions. I love working with
-            cutting-edge technologies and building scalable infrastructures.
+            Hey there! I’m Aviram Rabinovich, a Full Stack Developer with a
+            passion for building dynamic web applications, optimizing
+            performance, and delivering seamless user experiences. I love
+            working with cutting-edge technologies, crafting scalable solutions,
+            and bringing ideas to life through clean, efficient code.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -43,8 +44,8 @@ const AboutModal = () => {
             transition={{ duration: 0.3, delay: 0.1 }}
             className="text-gray-400 mt-4"
           >
-            In my free time, I enjoy learning new tech, contributing to
-            open-source, and sharing knowledge with the community.
+            In my free time, I enjoy learning new tech, building websites and
+            automations, and sharing knowledge with the community.{" "}
           </motion.p>
         </div>
       </DialogContent>

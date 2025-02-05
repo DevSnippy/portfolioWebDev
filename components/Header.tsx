@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Moon, Sun, Github, Linkedin } from "lucide-react";
-// Import Rubik Glitch instead of Cookie
 import { Rubik_Glitch } from "next/font/google";
 import {
   Dialog,
@@ -96,9 +95,12 @@ const Header = () => {
                       transition={{ duration: 0.3 }}
                       className="text-gray-200"
                     >
-                      Hey there! I’m Aviram Rabinovich, an Automation & DevOps
-                      Engineer with a passion for streamlining processes and
-                      delivering robust solutions.
+                      Hey there! I’m Aviram Rabinovich, a Full Stack Developer
+                      with a passion for building dynamic web applications,
+                      optimizing performance, and delivering seamless user
+                      experiences. I love working with cutting-edge
+                      technologies, crafting scalable solutions, and bringing
+                      ideas to life through clean, efficient code.
                     </motion.p>
                     <motion.p
                       initial={{ opacity: 0, y: 20 }}

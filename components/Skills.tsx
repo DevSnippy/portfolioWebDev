@@ -4,14 +4,18 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const skills = [
+  "JavaScript",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Python",
+  "REST APIs",
+  "Git",
   "Linux",
   "Bash Scripting",
-  "Python",
-  "Node.js",
-  "Docker",
-  "GitHub Actions",
-  "CI/CD",
-  "Infrastructure as Code (IaC)",
 ];
 
 const Skills = () => {

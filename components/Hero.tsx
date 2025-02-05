@@ -14,8 +14,10 @@ const Hero = () => {
   const fadeOpacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   const words = [
-    "Automation Developer",
-    "DevOps Developer",
+    "Node.js Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Full-Stack Developers",
   ];
 
   return (
