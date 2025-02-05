@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Moon, Sun, Github, Linkedin } from "lucide-react";
-import { Cookie } from "next/font/google";
+// Import Rubik Glitch instead of Cookie
+import { Rubik_Glitch } from "next/font/google";
 import {
   Dialog,
   DialogContent,
@@ -13,7 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
-const cookieFont = Cookie({ weight: "400", subsets: ["latin"] });
+const rubikGlitch = Rubik_Glitch({ weight: "400", subsets: ["latin"] });
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -39,9 +40,9 @@ const Header = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className={`text-2xl text-gray-800 dark:text-white ${cookieFont.className}`}
+          className={`text-2xl text-gray-800 dark:text-white ${rubikGlitch.className}`}
         >
-          Aviram's Site
+          AV
         </motion.h1>
 
         <nav>
