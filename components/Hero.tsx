@@ -17,7 +17,7 @@ const Hero = () => {
     "Node.js Developer",
     "React Developer",
     "Next.js Developer",
-    "Full-Stack Developers",
+    "Full-Stack Developer",
   ];
 
   return (
