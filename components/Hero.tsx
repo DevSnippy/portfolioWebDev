@@ -1,28 +1,33 @@
 "use client";
 import photo from "../assets/Photo.jpg";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import ContactModal from "./ContactModal";
 import { FlipWords } from "./ui/flip-words";
-import { Meteors } from "./ui/meteors"; // Make sure you have this import
+import { Meteors } from "./ui/meteors";
 
 const Hero = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  // Get the scroll position and map it to an opacity value.
+  // As you scroll from 0 to 300px, opacity will go from 1 to 0.
+  const { scrollY } = useScroll();
+  const fadeOpacity = useTransform(scrollY, [0, 300], [1, 0]);
+
   const words = ["Automation Engineer", "DevOps Engineer", "Kickass Engineer"];
 
   return (
-    <section
+    <motion.section
       ref={ref}
+      style={{ opacity: fadeOpacity }}
       className="relative min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 overflow-hidden"
     >
-      {/* Meteors effect in the background */}
       <div className="absolute inset-0 pointer-events-none">
-        <Meteors number={20} />
+        <Meteors number={30} />
       </div>
 
-      {/* Hero content above meteors */}
       <div className="relative z-10 container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -54,7 +59,7 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
