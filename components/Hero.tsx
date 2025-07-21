@@ -21,11 +21,11 @@ const Hero = () => {
   const opacity = useTransform(scrollY, [0, 200], [1, 0.8]);
 
   const words = [
+    "Automation Developer",
     "Node.js Developer",
     "React Developer",
     "Next.js Developer",
     "Full-Stack Developer",
-    "Automation Developer",
   ];
 
   const scrollToSkills = () => {
@@ -163,8 +163,11 @@ const Hero = () => {
               onClick={scrollToSkills}
               className="flex flex-col items-center gap-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 group"
             >
-              <span className="text-sm">View Skills</span>
-              <ArrowDown className="w-4 h-4 animate-bounce group-hover:translate-y-1 transition-transform" />
+              {/* Only visible on small screens and up */}
+              <div className="hidden sm:flex flex-col items-center gap-2">
+                <span className="text-sm">View Skills</span>
+                <ArrowDown className="w-4 h-4 animate-bounce group-hover:translate-y-1 transition-transform" />
+              </div>
             </Button>
           </motion.div>
         </motion.div>
